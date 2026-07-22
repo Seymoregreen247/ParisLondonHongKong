@@ -58,7 +58,7 @@
       <div class="eyebrow">Ten standout designs</div>
       <h1>PARIS LONDON<br>HONG KONG</h1>
       <p>Find the tee that speaks your language. Pick your design, choose your color and size, and make it yours.</p>
-      <div class="hero-actions"><button class="primary" onclick="document.getElementById('collection').scrollIntoView()">Shop the ten</button><button class="secondary" onclick="openCart()">View bag</button></div>
+      <div class="hero-actions"><button class="primary" onclick="document.getElementById('collection').scrollIntoView()">Shop the ten</button><button class="secondary" onclick="openCart()">View bag</button><button class="secondary" style="background:#4BBB2A;color:#111" onclick="openSignup()">Sign Up — Get $5 Off</button></div>
     </div>
     <div class="hero-stamp"><div class="stamp-inner"><div class="stamp-sg">10</div><div class="stamp-rule"></div><div class="stamp-copy">R10</div><div class="stamp-small">ORIGINAL COLLECTION</div></div></div>
   </section>
@@ -87,6 +87,10 @@
 
   <div class="overlay" id="manage-overlay" role="dialog" aria-modal="true">
     <div class="modal"><div class="modal-head"><div class="modal-title">MANAGE ROSLINDALE TOP 10 TEES</div><button class="close" onclick="closeOverlay('manage-overlay')" aria-label="Close">×</button></div><div class="modal-body" id="manage-body"></div></div>
+  </div>
+
+  <div class="overlay" id="signup-overlay" role="dialog" aria-modal="true">
+    <div class="modal" style="max-width:440px"><div class="modal-head" style="background:#4BBB2A"><div class="modal-title" style="color:#111">GET $5 OFF IN-STORE</div><button class="close" style="color:#111" onclick="closeOverlay('signup-overlay')" aria-label="Close">×</button></div><div class="modal-body" id="signup-body"></div></div>
   </div>
 
   <script>
@@ -219,6 +223,54 @@
     let manageView="designs";
     let gallery=[];
     function openManage(){renderManageBody();openOverlay("manage-overlay")}
+    function openSignup(){renderSignupForm();openOverlay("signup-overlay")}
+    function renderSignupForm(){
+      document.getElementById("signup-body").innerHTML=`
+        <div class="section-note" style="margin-bottom:16px">Sign up and get a code for $5 off any shirt when you come into the Roslindale shop — valid for 24 hours.</div>
+        <div class="field"><label>FULL NAME</label><input id="signup-name" autocomplete="name"></div>
+        <div class="field"><label>EMAIL</label><input id="signup-email" type="email" autocomplete="email"></div>
+        <div class="field"><label>PHONE</label><input id="signup-phone" autocomplete="tel"></div>
+        <button class="add-bag" style="background:#4BBB2A;color:#111" onclick="submitSignup()">GET MY CODE</button>
+        <div id="signup-status" style="font-size:11px;color:var(--muted);margin-top:10px"></div>`;
+    }
+    async function submitSignup(){
+      const name=document.getElementById("signup-name");
+      const email=document.getElementById("signup-email");
+      const phone=document.getElementById("signup-phone");
+      const status=document.getElementById("signup-status");
+      if(!name.value.trim()||!email.value.trim()||!phone.value.trim()){
+        status.textContent="Please fill in your name, email, and phone.";
+        return;
+      }
+      if(GOOGLE_SHEETS_WEBHOOK_URL.includes("PASTE_YOUR")){
+        status.textContent="Sign-up isn't connected yet — check back soon.";
+        return;
+      }
+      status.textContent="Getting your code…";
+      try{
+        const res=await fetch(GOOGLE_SHEETS_WEBHOOK_URL,{
+          method:"POST",
+          headers:{"Content-Type":"text/plain"},
+          body:JSON.stringify({type:"signup",name:name.value.trim(),email:email.value.trim(),phone:phone.value.trim()})
+        });
+        const result=await res.json();
+        if(result&&result.code){
+          const expires=new Date(result.expiresAt);
+          document.getElementById("signup-body").innerHTML=`
+            <div style="text-align:center;padding:10px 0">
+              <div style="font-size:13px;color:var(--muted);letter-spacing:1px;margin-bottom:10px">YOUR CODE</div>
+              <div style="font:900 48px Barlow Condensed,sans-serif;color:#4BBB2A;letter-spacing:4px;margin-bottom:14px">${result.code}</div>
+              <div style="font-size:13px;line-height:1.7;color:var(--muted)">Bring this code into the Roslindale shop for <b>$5 off</b> any shirt.<br>Valid until <b>${expires.toLocaleString()}</b> — about 24 hours from now.</div>
+              <button class="add-bag" style="margin-top:20px" onclick="closeOverlay('signup-overlay')">GOT IT</button>
+            </div>`;
+        }else{
+          status.textContent="Something went wrong — please try again.";
+        }
+      }catch(e){
+        console.error("Signup failed",e);
+        status.textContent="Couldn't reach the sign-up system — please try again.";
+      }
+    }
     function renderManageBody(){
       const body=document.getElementById("manage-body");
       if(!manageUnlocked){
