@@ -56,7 +56,7 @@
   <section class="hero">
     <div class="hero-copy">
       <div class="eyebrow">Ten standout designs</div>
-      <h1>TOP 10<br>TEES</h1>
+      <h1>PARIS LONDON<br>HONG KONG</h1>
       <p>Find the tee that speaks your language. Pick your design, choose your color and size, and make it yours.</p>
       <div class="hero-actions"><button class="primary" onclick="document.getElementById('collection').scrollIntoView()">Shop the ten</button><button class="secondary" onclick="openCart()">View bag</button></div>
     </div>
@@ -102,21 +102,21 @@
     const GOOGLE_SHEETS_WEBHOOK_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
 
     /* ================================================================
-       TOP 10 PRODUCTS
+       PARIS LONDON HONG KONG PRODUCTS
        Later, replace each image value with its final finished artwork as
        a data:image/... URL. These records do not use localStorage.
        ================================================================ */
     const PRODUCTS = [
-      {id:"T1001",name:"TOP TEN DESIGN 01",tag:"Top 10 Exclusive",price:30,accent:"#d71936",image:""},
-      {id:"T1002",name:"TOP TEN DESIGN 02",tag:"Top 10 Exclusive",price:30,accent:"#0f4c9a",image:""},
-      {id:"T1003",name:"TOP TEN DESIGN 03",tag:"Top 10 Exclusive",price:30,accent:"#16804a",image:""},
-      {id:"T1004",name:"TOP TEN DESIGN 04",tag:"Top 10 Exclusive",price:30,accent:"#6c2a83",image:""},
-      {id:"T1005",name:"TOP TEN DESIGN 05",tag:"Top 10 Exclusive",price:30,accent:"#ef8b1e",image:""},
-      {id:"T1006",name:"TOP TEN DESIGN 06",tag:"Top 10 Exclusive",price:30,accent:"#10131a",image:""},
-      {id:"T1007",name:"TOP TEN DESIGN 07",tag:"Top 10 Exclusive",price:30,accent:"#a6132b",image:""},
-      {id:"T1008",name:"TOP TEN DESIGN 08",tag:"Top 10 Exclusive",price:30,accent:"#0d7180",image:""},
-      {id:"T1009",name:"TOP TEN DESIGN 09",tag:"Top 10 Exclusive",price:30,accent:"#8a6820",image:""},
-      {id:"T1010",name:"TOP TEN DESIGN 10",tag:"Top 10 Exclusive",price:30,accent:"#071d49",image:""}
+      {id:"T1001",name:"PARIS",tag:"Paris London Hong Kong Roslindale",price:30,accent:"#d71936",image:""},
+      {id:"T1002",name:"LONDON",tag:"Paris London Hong Kong Roslindale",price:30,accent:"#0f4c9a",image:""},
+      {id:"T1003",name:"HONG KONG",tag:"Paris London Hong Kong Roslindale",price:30,accent:"#16804a",image:""},
+      {id:"T1004",name:"ROSLINDALE",tag:"Paris London Hong Kong Roslindale",price:30,accent:"#6c2a83",image:""},
+      {id:"T1005",name:"PARIS II",tag:"Paris London Hong Kong Roslindale",price:30,accent:"#ef8b1e",image:""},
+      {id:"T1006",name:"LONDON II",tag:"Paris London Hong Kong Roslindale",price:30,accent:"#10131a",image:""},
+      {id:"T1007",name:"HONG KONG II",tag:"Paris London Hong Kong Roslindale",price:30,accent:"#a6132b",image:""},
+      {id:"T1008",name:"ROSLINDALE II",tag:"Paris London Hong Kong Roslindale",price:30,accent:"#0d7180",image:""},
+      {id:"T1009",name:"WORLD TOUR 01",tag:"Paris London Hong Kong Roslindale",price:30,accent:"#8a6820",image:""},
+      {id:"T1010",name:"WORLD TOUR 02",tag:"Paris London Hong Kong Roslindale",price:30,accent:"#071d49",image:""}
     ];
 
     const SIZE_UPCHARGE={S:0,M:0,L:0,XL:0,"2XL":3,"3XL":3,"4XL":5,"5XL":5};
@@ -161,7 +161,7 @@
     function openCart(){renderCart();openOverlay("cart-overlay")}
     function renderCart(){
       const lines=document.getElementById("cart-lines"),footer=document.getElementById("cart-footer");
-      if(!cart.length){lines.innerHTML='<div class="cart-empty">Your bag is empty.<br>Choose one of the Top 10.</div>';footer.innerHTML="";return}
+      if(!cart.length){lines.innerHTML='<div class="cart-empty">Your bag is empty.<br>Choose one of the collection.</div>';footer.innerHTML="";return}
       lines.innerHTML=cart.map((i,n)=>`<div class="cart-line"><img src="${i.image}" alt=""><div><div class="cart-line-name">${escapeXml(i.name)}</div><div class="cart-line-detail">${i.color} • Size ${i.size} • Qty ${i.qty}${i.prints&&i.prints.length?` • ${i.prints.join(", ")}`:""}</div><button class="remove" onclick="removeItem(${n})">REMOVE</button></div><strong>${money(i.total)}</strong></div>`).join("");
       footer.innerHTML=`<div class="cart-summary"><div class="summary-row"><span>Merchandise</span><b>${money(subtotal())}</b></div><div class="summary-row"><span>Shipping</span><span>Calculated next</span></div><div class="summary-row total"><span>SUBTOTAL</span><span>${money(subtotal())}</span></div></div><button class="checkout" onclick="startCheckout()">CONTINUE TO PAYPAL</button>`;
     }
@@ -232,7 +232,7 @@
         return;
       }
       const tabs=`<div style="display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap">
-        <button class="choice ${manageView==='designs'?'on':''}" onclick="switchManageView('designs')">TOP 10 DESIGNS</button>
+        <button class="choice ${manageView==='designs'?'on':''}" onclick="switchManageView('designs')">PLHK DESIGNS</button>
         <button class="choice ${manageView==='gallery'?'on':''}" onclick="switchManageView('gallery')">PHOTO GALLERY</button>
         <button class="choice ${manageView==='shipping'?'on':''}" onclick="switchManageView('shipping')">SHIPPING</button>
       </div>`;
@@ -256,7 +256,7 @@
         </div>`).join("");
     }
     function renderGalleryTab(){
-      return `<div class="section-note" style="margin-bottom:18px">Keep a rotating bank of shirt photos here. Assign any of them to a Top 10 slot from the "FROM GALLERY" dropdown on the Designs tab — swap designs in and out without re-uploading.</div>
+      return `<div class="section-note" style="margin-bottom:18px">Keep a rotating bank of shirt photos here. Assign any of them to a PLHK slot from the "FROM GALLERY" dropdown on the Designs tab — swap designs in and out without re-uploading.</div>
       <label class="add-bag" style="display:block;text-align:center;cursor:pointer;margin-bottom:20px">ADD PHOTOS TO GALLERY<input type="file" accept="image/*" multiple style="display:none" onchange="uploadToGallery(this)"></label>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:14px">
         ${gallery.length?gallery.map(g=>`
