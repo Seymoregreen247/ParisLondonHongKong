@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#071d49">
-  <meta name="description" content="Paris London Hong Kong — ten standout designs built for the culture.">
-  <title>Paris London Hong Kong</title>
+  <meta name="description" content="Paris London Hong Kong Roslindale — ten standout designs built for the culture.">
+  <title>Paris London Hong Kong Roslindale</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#002868">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Paris London Hong Kong">
+  <meta name="apple-mobile-web-app-title" content="Paris London Hong Kong Roslindale">
   <meta name="mobile-web-app-capable" content="yes">
   <style>
     :root{--navy:#111111;--blue:#4BBB2A;--red:#4BBB2A;--cream:#f4f4f4;--ink:#0a0a0a;--muted:#6b6b6b;--line:#dcdcdc;--gold:#4BBB2A;--shadow:0 18px 45px rgba(0,0,0,.2)}
@@ -46,7 +46,7 @@
 <body>
   <div class="announcement">Ten designs. Built for the culture.</div>
   <header class="site-header">
-    <div class="brand"><div class="brand-mark">10</div><div><div class="brand-name">PARIS LONDON HONG KONG</div></div></div>
+    <div class="brand"><div class="brand-mark">10</div><div><div class="brand-name">PARIS LONDON HONG KONG ROSLINDALE</div></div></div>
     <div style="display:flex;gap:10px;align-items:center">
     <button class="cart-button" type="button" onclick="openCart()">BAG <span class="cart-count" id="cart-count">0</span></button>
     <button class="cart-button" type="button" style="background:transparent;color:var(--navy);border:1px solid var(--line)" onclick="openManage()">MANAGE</button>
@@ -71,7 +71,7 @@
     <div class="product-grid" id="product-grid"></div>
   </main>
 
-  <footer><div><div class="footer-brand">PARIS LONDON HONG KONG</div><div class="footer-copy">© 2026 PARIS LONDON HONG KONG.<br>ALL RIGHTS RESERVED.<br><a href="https://www.seymoregreen.com" style="color:#4BBB2A;text-decoration:none;font-weight:800">A SEYMORE GREEN COLLECTION →</a></div></div><div class="stripes"><i></i><i></i><i></i></div></footer>
+  <footer><div><div class="footer-brand">PARIS LONDON HONG KONG ROSLINDALE</div><div class="footer-copy">© 2026 PARIS LONDON HONG KONG ROSLINDALE.<br>ALL RIGHTS RESERVED.<br><a href="https://www.seymoregreen.com" style="color:#4BBB2A;text-decoration:none;font-weight:800">A SEYMORE GREEN COLLECTION →</a></div></div><div class="stripes"><i></i><i></i><i></i></div></footer>
 
   <div class="overlay" id="product-overlay" role="dialog" aria-modal="true">
     <div class="modal"><div class="modal-head"><div class="modal-title">BUILD YOUR TEE</div><button class="close" onclick="closeOverlay('product-overlay')" aria-label="Close">×</button></div><div class="modal-body" id="product-modal-body"></div></div>
@@ -86,7 +86,7 @@
   </div>
 
   <div class="overlay" id="manage-overlay" role="dialog" aria-modal="true">
-    <div class="modal"><div class="modal-head"><div class="modal-title">MANAGE PARIS LONDON HONG KONG</div><button class="close" onclick="closeOverlay('manage-overlay')" aria-label="Close">×</button></div><div class="modal-body" id="manage-body"></div></div>
+    <div class="modal"><div class="modal-head"><div class="modal-title">MANAGE PARIS LONDON HONG KONG ROSLINDALE</div><button class="close" onclick="closeOverlay('manage-overlay')" aria-label="Close">×</button></div><div class="modal-body" id="manage-body"></div></div>
   </div>
 
   <script>
@@ -102,7 +102,7 @@
     const GOOGLE_SHEETS_WEBHOOK_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
 
     /* ================================================================
-       PARIS LONDON HONG KONG PRODUCTS
+       PARIS LONDON HONG KONG ROSLINDALE PRODUCTS
        Later, replace each image value with its final finished artwork as
        a data:image/... URL. These records do not use localStorage.
        ================================================================ */
@@ -131,10 +131,10 @@
     function escapeXml(v){return String(v).replace(/[<>&'\"]/g,c=>({"<":"&lt;",">":"&gt;","&":"&amp;","'":"&apos;",'\"':"&quot;"}[c]));}
     function productArt(product,index){
       if(product.image) return product.image;
-      const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#edf1f7"/></linearGradient></defs><rect width="900" height="900" fill="url(#g)"/><path d="M265 228l105-55c25 46 135 46 160 0l105 55 120 145-100 82-58-72v322H303V383l-58 72-100-82z" fill="#fff" stroke="${product.accent}" stroke-width="13"/><circle cx="450" cy="444" r="145" fill="${product.accent}"/><text x="450" y="430" text-anchor="middle" fill="#fff" font-family="Arial Black,Arial" font-size="128" font-weight="900">${String(index+1).padStart(2,"0")}</text><text x="450" y="500" text-anchor="middle" fill="#fff" font-family="Arial" font-size="28" font-weight="700" letter-spacing="6">PARIS LONDON HONG KONG</text><text x="450" y="765" text-anchor="middle" fill="#071d49" font-family="Arial Black,Arial" font-size="31" font-weight="900" letter-spacing="5">PLHK COLLECTION</text></svg>`;
+      const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#edf1f7"/></linearGradient></defs><rect width="900" height="900" fill="url(#g)"/><path d="M265 228l105-55c25 46 135 46 160 0l105 55 120 145-100 82-58-72v322H303V383l-58 72-100-82z" fill="#fff" stroke="${product.accent}" stroke-width="13"/><circle cx="450" cy="444" r="145" fill="${product.accent}"/><text x="450" y="430" text-anchor="middle" fill="#fff" font-family="Arial Black,Arial" font-size="128" font-weight="900">${String(index+1).padStart(2,"0")}</text><text x="450" y="500" text-anchor="middle" fill="#fff" font-family="Arial" font-size="28" font-weight="700" letter-spacing="6">PARIS LONDON HONG KONG ROSLINDALE</text><text x="450" y="765" text-anchor="middle" fill="#071d49" font-family="Arial Black,Arial" font-size="31" font-weight="900" letter-spacing="5">PLHK COLLECTION</text></svg>`;
       return "data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(svg);
     }
-    function watermark(){return '<div class="art-watermark"><span>PARIS LONDON HONG KONG</span><span>PARIS LONDON HONG KONG</span><span>PARIS LONDON HONG KONG</span></div><div class="corner-stamp">PLHK<br>ORIGINAL</div>';}
+    function watermark(){return '<div class="art-watermark"><span>PARIS LONDON HONG KONG ROSLINDALE</span><span>PARIS LONDON HONG KONG ROSLINDALE</span><span>PARIS LONDON HONG KONG ROSLINDALE</span></div><div class="corner-stamp">PLHK<br>ORIGINAL</div>';}
     function money(n){return "$"+Number(n).toFixed(2)}
     function printsCost(){return selection.prints.reduce((n,p)=>n+(PRINTS[p]||0),0)}
     function productTotal(){return (current.price+GARMENTS[selection.garment]+SIZE_UPCHARGE[selection.size]+printsCost())*selection.qty}
