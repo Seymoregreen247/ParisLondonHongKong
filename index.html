@@ -111,16 +111,16 @@
        a data:image/... URL. These records do not use localStorage.
        ================================================================ */
     const PRODUCTS = [
-      {id:"T1001",name:"PARIS",tag:"Roslindale Top 10 Tees",price:25,accent:"#d71936",image:""},
-      {id:"T1002",name:"LONDON",tag:"Roslindale Top 10 Tees",price:25,accent:"#0f4c9a",image:""},
-      {id:"T1003",name:"HONG KONG",tag:"Roslindale Top 10 Tees",price:25,accent:"#16804a",image:""},
-      {id:"T1004",name:"ROSLINDALE",tag:"Roslindale Top 10 Tees",price:25,accent:"#6c2a83",image:""},
-      {id:"T1005",name:"PARIS II",tag:"Roslindale Top 10 Tees",price:25,accent:"#ef8b1e",image:""},
-      {id:"T1006",name:"LONDON II",tag:"Roslindale Top 10 Tees",price:25,accent:"#10131a",image:""},
-      {id:"T1007",name:"HONG KONG II",tag:"Roslindale Top 10 Tees",price:25,accent:"#a6132b",image:""},
-      {id:"T1008",name:"ROSLINDALE II",tag:"Roslindale Top 10 Tees",price:25,accent:"#0d7180",image:""},
-      {id:"T1009",name:"WORLD TOUR 01",tag:"Roslindale Top 10 Tees",price:25,accent:"#8a6820",image:""},
-      {id:"T1010",name:"WORLD TOUR 02",tag:"Roslindale Top 10 Tees",price:25,accent:"#071d49",image:""}
+      {id:"T1001",name:"PARIS",tag:"Roslindale Top 10 Tees",desc:"",price:25,accent:"#d71936",image:""},
+      {id:"T1002",name:"LONDON",tag:"Roslindale Top 10 Tees",desc:"",price:25,accent:"#0f4c9a",image:""},
+      {id:"T1003",name:"HONG KONG",tag:"Roslindale Top 10 Tees",desc:"",price:25,accent:"#16804a",image:""},
+      {id:"T1004",name:"ROSLINDALE",tag:"Roslindale Top 10 Tees",desc:"",price:25,accent:"#6c2a83",image:""},
+      {id:"T1005",name:"DESIGN 05",tag:"Roslindale Top 10 Tees",desc:"",price:25,accent:"#ef8b1e",image:""},
+      {id:"T1006",name:"DESIGN 06",tag:"Roslindale Top 10 Tees",desc:"",price:25,accent:"#10131a",image:""},
+      {id:"T1007",name:"DESIGN 07",tag:"Roslindale Top 10 Tees",desc:"",price:25,accent:"#a6132b",image:""},
+      {id:"T1008",name:"DESIGN 08",tag:"Roslindale Top 10 Tees",desc:"",price:25,accent:"#0d7180",image:""},
+      {id:"T1009",name:"DESIGN 09",tag:"Roslindale Top 10 Tees",desc:"",price:25,accent:"#8a6820",image:""},
+      {id:"T1010",name:"DESIGN 10",tag:"Roslindale Top 10 Tees",desc:"",price:25,accent:"#071d49",image:""}
     ];
 
     const SIZE_UPCHARGE={S:0,M:0,L:0,XL:0,"2XL":3,"3XL":3,"4XL":5,"5XL":5};
@@ -150,7 +150,7 @@
     function renderChoices(values,key){return values.map(v=>`<button class="choice ${selection[key]===v?'on':''}" onclick="setChoice('${key}','${v}')">${v}${key==='garment'&&GARMENTS[v]?` +${money(GARMENTS[v])}`:''}${key==='size'&&SIZE_UPCHARGE[v]?` +${money(SIZE_UPCHARGE[v])}`:''}</button>`).join("")}
     function renderProductModal(){
       const i=PRODUCTS.indexOf(current);
-      document.getElementById("product-modal-body").innerHTML=`<div class="product-modal-grid"><div class="modal-art"><img src="${productArt(current,i)}" alt="${escapeXml(current.name)}">${watermark()}</div><div><div class="section-kicker">${current.id}</div><h3 style="font:900 38px/.95 Barlow Condensed,sans-serif;color:var(--navy);margin:8px 0">${escapeXml(current.name)}</h3><div class="choice-title">COLOR</div><div class="choices">${renderChoices(COLORS,'color')}</div><div class="choice-title">SIZE</div><div class="choices">${renderChoices(Object.keys(SIZE_UPCHARGE),'size')}</div><div class="choice-title">QUANTITY</div><div class="qty"><button onclick="changeQty(-1)">−</button><strong>${selection.qty}</strong><button onclick="changeQty(1)">+</button></div><div class="selection-total">TOTAL ${money(productTotal())}</div><button class="add-bag" onclick="addToBag()">ADD TO BAG</button></div></div>`;
+      document.getElementById("product-modal-body").innerHTML=`<div class="product-modal-grid"><div class="modal-art"><img src="${productArt(current,i)}" alt="${escapeXml(current.name)}">${watermark()}</div><div><div class="section-kicker">${current.id}</div><h3 style="font:900 38px/.95 Barlow Condensed,sans-serif;color:var(--navy);margin:8px 0">${escapeXml(current.name)}</h3>${current.desc?`<p style="font-size:13px;color:var(--muted);line-height:1.6;margin:-4px 0 14px">${escapeXml(current.desc)}</p>`:""}<div class="choice-title">COLOR</div><div class="choices">${renderChoices(COLORS,'color')}</div><div class="choice-title">SIZE</div><div class="choices">${renderChoices(Object.keys(SIZE_UPCHARGE),'size')}</div><div class="choice-title">QUANTITY</div><div class="qty"><button onclick="changeQty(-1)">−</button><strong>${selection.qty}</strong><button onclick="changeQty(1)">+</button></div><div class="selection-total">TOTAL ${money(productTotal())}</div><button class="add-bag" onclick="addToBag()">ADD TO BAG</button></div></div>`;
     }
     function setChoice(key,value){selection[key]=value;renderProductModal()}
     function changeQty(delta){selection.qty=Math.max(1,Math.min(12,selection.qty+delta));renderProductModal()}
@@ -301,6 +301,11 @@
             ${gallery.length?`<select class="choice" style="cursor:pointer" onchange="if(this.value){assignGalleryPhoto(this.value,'${p.id}');this.value=''}"><option value="">FROM GALLERY…</option>${gallery.map(g=>`<option value="${g.id}">${escapeXml(g.name)}</option>`).join("")}</select>`:""}
             ${p.image?`<button class="choice" onclick="removePhoto('${p.id}')">REMOVE</button>`:""}
           </div>
+          <div style="grid-column:1 / -1">
+            <div style="font-size:10px;font-weight:900;letter-spacing:1px;color:var(--muted);margin-bottom:4px">DESCRIPTION</div>
+            <textarea id="desc-${p.id}" rows="2" placeholder="Write what makes this shirt different…" style="width:100%;border:1px solid var(--line);padding:8px;font-family:inherit;font-size:12px;resize:vertical">${escapeXml(p.desc||"")}</textarea>
+            <button class="choice" style="margin-top:6px" onclick="saveDescription('${p.id}')">SAVE DESCRIPTION</button>
+          </div>
         </div>`).join("");
     }
     function renderGalleryTab(){
@@ -402,6 +407,7 @@
       const settings={
         productOrder:PRODUCTS.map(p=>p.id),
         photos:Object.fromEntries(PRODUCTS.map(p=>[p.id,p.image||""])),
+        descriptions:Object.fromEntries(PRODUCTS.map(p=>[p.id,p.desc||""])),
         gallery,
         shippingPrice:SHIPPING_PRICE
       };
@@ -409,6 +415,14 @@
         await fetch(GOOGLE_SHEETS_WEBHOOK_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify({type:"settings",settings})});
         return true;
       }catch(e){console.error("Could not save settings to Google Sheets",e);return false}
+    }
+    async function saveDescription(productId){
+      const product=PRODUCTS.find(p=>p.id===productId);
+      const input=document.getElementById(`desc-${productId}`);
+      if(!product||!input)return;
+      product.desc=input.value;
+      await saveSettings();
+      renderManageBody();
     }
     async function loadSettings(){
       if(GOOGLE_SHEETS_WEBHOOK_URL.includes("PASTE_YOUR"))return;
@@ -423,6 +437,7 @@
           PRODUCTS.length=0;PRODUCTS.push(...reordered);
         }
         if(settings.photos){PRODUCTS.forEach(p=>{if(settings.photos[p.id])p.image=settings.photos[p.id]})}
+        if(settings.descriptions){PRODUCTS.forEach(p=>{if(settings.descriptions[p.id]!==undefined)p.desc=settings.descriptions[p.id]})}
         if(Array.isArray(settings.gallery))gallery=settings.gallery;
         if(typeof settings.shippingPrice==="number")SHIPPING_PRICE=settings.shippingPrice;
       }catch(e){console.error("Could not load settings from Google Sheets",e)}
