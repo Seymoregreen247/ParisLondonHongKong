@@ -133,7 +133,7 @@
       const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#edf1f7"/></linearGradient></defs><rect width="900" height="900" fill="url(#g)"/><path d="M265 228l105-55c25 46 135 46 160 0l105 55 120 145-100 82-58-72v322H303V383l-58 72-100-82z" fill="#fff" stroke="${product.accent}" stroke-width="13"/><circle cx="450" cy="444" r="145" fill="${product.accent}"/><text x="450" y="430" text-anchor="middle" fill="#fff" font-family="Arial Black,Arial" font-size="128" font-weight="900">${String(index+1).padStart(2,"0")}</text><text x="450" y="500" text-anchor="middle" fill="#fff" font-family="Arial" font-size="28" font-weight="700" letter-spacing="6">ROSLINDALE TOP 10 TEES</text><text x="450" y="765" text-anchor="middle" fill="#071d49" font-family="Arial Black,Arial" font-size="31" font-weight="900" letter-spacing="5">ROSLINDALE COLLECTION</text></svg>`;
       return "data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(svg);
     }
-    function watermark(){return '<div class="art-watermark"><span>ROSLINDALE TOP 10 TEES</span><span>ROSLINDALE TOP 10 TEES</span><span>ROSLINDALE TOP 10 TEES</span></div><div class="corner-stamp">R10<br>ORIGINAL</div>';}
+    function watermark(){return '';}
     function money(n){return "$"+Number(n).toFixed(2)}
     function productTotal(){return (current.price+GARMENTS[selection.garment]+SIZE_UPCHARGE[selection.size])*selection.qty}
 
