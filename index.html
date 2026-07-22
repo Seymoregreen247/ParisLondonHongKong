@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071d49">
+  <meta name="description" content="Paris London Hong Kong — ten standout designs built for the culture.">
+  <title>Paris London Hong Kong</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#002868">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Paris London Hong Kong">
+  <meta name="mobile-web-app-capable" content="yes">
+  <style>
+    :root{--navy:#111111;--blue:#4BBB2A;--red:#4BBB2A;--cream:#f4f4f4;--ink:#0a0a0a;--muted:#6b6b6b;--line:#dcdcdc;--gold:#4BBB2A;--shadow:0 18px 45px rgba(0,0,0,.2)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:Inter,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}img{-webkit-user-drag:none;user-select:none}.hidden{display:none!important}
+    .announcement{background:var(--red);color:#fff;text-align:center;padding:9px 14px;font:800 12px/1.2 Inter,sans-serif;letter-spacing:1.8px;text-transform:uppercase}
+    .site-header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px clamp(16px,4vw,52px);background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    .brand{display:flex;align-items:center;gap:12px}.brand-mark{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;border:4px solid #fff;outline:2px solid var(--navy);font:900 17px Barlow Condensed,sans-serif;letter-spacing:1px}.brand-name{font:900 clamp(25px,4vw,35px)/.85 Barlow Condensed,sans-serif;letter-spacing:1px;color:var(--navy)}.brand-sub{font-size:9px;font-weight:800;letter-spacing:3px;color:var(--red);margin-top:5px}
+    .cart-button{border:0;background:var(--navy);color:#fff;border-radius:999px;padding:12px 17px;font-weight:800;display:flex;align-items:center;gap:8px}.cart-count{display:grid;place-items:center;min-width:23px;height:23px;padding:0 6px;border-radius:99px;background:var(--gold);color:var(--navy);font-size:12px}
+    .hero{position:relative;overflow:hidden;min-height:480px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px;padding:clamp(46px,8vw,96px) clamp(18px,7vw,90px);background:linear-gradient(125deg,#061536 0%,#0c2f73 62%,#123e8c 100%);color:#fff}.hero:after{content:"10";position:absolute;right:-2vw;bottom:-14vw;font:900 min(50vw,680px)/1 Barlow Condensed,sans-serif;color:rgba(255,255,255,.035)}.hero-copy{position:relative;z-index:2}.eyebrow{display:inline-flex;align-items:center;gap:10px;color:#fff;font:800 11px Inter,sans-serif;letter-spacing:4px;text-transform:uppercase}.eyebrow:before{content:"";width:34px;height:4px;background:var(--red)}h1{font:900 clamp(66px,11vw,150px)/.72 Barlow Condensed,sans-serif;margin:22px 0 26px;letter-spacing:-3px}.hero p{max-width:590px;color:#d7e2f6;font-size:clamp(15px,2vw,19px);line-height:1.7;margin:0 0 30px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.primary,.secondary{border:0;border-radius:3px;padding:15px 23px;font-weight:900;letter-spacing:1px;text-transform:uppercase}.primary{background:var(--red);color:#fff}.secondary{background:#fff;color:var(--navy)}
+    .hero-stamp{position:relative;z-index:2;justify-self:center;width:min(330px,78vw);aspect-ratio:1;display:grid;place-items:center;border-radius:50%;border:3px solid rgba(255,255,255,.6);box-shadow:0 0 0 13px rgba(255,255,255,.06),0 0 0 15px rgba(255,255,255,.28);transform:rotate(-7deg)}.stamp-inner{text-align:center}.stamp-sg{font:900 112px/.72 Barlow Condensed,sans-serif;color:#fff}.stamp-rule{width:70%;height:6px;margin:20px auto;background:var(--red)}.stamp-copy{font:900 20px/1 Barlow Condensed,sans-serif;letter-spacing:6px}.stamp-small{font-size:10px;letter-spacing:4px;margin-top:10px;color:#cbd9f0}
+    .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line);background:var(--cream)}.trust{padding:20px 14px;text-align:center;border-right:1px solid var(--line)}.trust:last-child{border-right:0}.trust b{display:block;color:var(--navy);font:800 14px Barlow Condensed,sans-serif;letter-spacing:1px}.trust span{font-size:10px;color:var(--muted);letter-spacing:.5px}
+    main{max-width:1440px;margin:auto;padding:70px clamp(14px,4vw,56px)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}.section-kicker{color:var(--red);font-size:11px;font-weight:900;letter-spacing:4px}.section-head h2{font:900 clamp(42px,7vw,76px)/.85 Barlow Condensed,sans-serif;color:var(--navy);margin:8px 0 0}.section-note{max-width:390px;color:var(--muted);font-size:13px;line-height:1.65}
+    .product-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}.product-card{position:relative;background:#fff;border:1px solid var(--line);box-shadow:0 4px 14px rgba(7,29,73,.06);transition:.22s;overflow:hidden}.product-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#aebbd0}.rank{position:absolute;z-index:5;top:11px;left:11px;background:var(--navy);color:#fff;padding:7px 10px;font:900 13px Barlow Condensed,sans-serif;letter-spacing:1px}.art-wrap{position:relative;aspect-ratio:1;background:#f4f6fa;overflow:hidden}.art-wrap img{width:100%;height:100%;object-fit:contain;display:block}.art-watermark{position:absolute;inset:0;z-index:4;pointer-events:none;display:flex;flex-direction:column;justify-content:space-around;align-items:center;overflow:hidden;transform:rotate(-28deg) scale(1.35)}.art-watermark span{font:900 9px Inter,sans-serif;letter-spacing:3px;color:rgba(7,29,73,.13);white-space:nowrap}.corner-stamp{position:absolute;right:9px;bottom:9px;z-index:6;border:2px solid rgba(215,25,54,.72);color:rgba(215,25,54,.82);background:rgba(255,255,255,.86);border-radius:50%;width:56px;height:56px;display:grid;place-items:center;text-align:center;font:900 9px/1 Barlow Condensed,sans-serif;letter-spacing:1px;transform:rotate(-10deg)}.product-info{padding:18px}.product-name{font:900 22px/1 Barlow Condensed,sans-serif;color:var(--navy);min-height:44px}.product-tag{font-size:10px;color:var(--muted);letter-spacing:1px;margin-top:6px}.product-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:16px}.price{font:900 25px Barlow Condensed,sans-serif}.choose{border:0;background:var(--navy);color:#fff;padding:10px 12px;font:800 11px Inter,sans-serif;letter-spacing:.8px;text-transform:uppercase}
+    footer{background:var(--navy);color:#fff;padding:40px clamp(18px,5vw,70px);display:flex;justify-content:space-between;align-items:center;gap:25px}.footer-brand{font:900 34px Barlow Condensed,sans-serif}.footer-copy{color:#9fb0ce;font-size:11px;line-height:1.7}.stripes{display:flex;gap:8px}.stripes i{display:block;width:9px;height:45px;background:var(--red);transform:skew(-16deg)}
+    .overlay{display:none;position:fixed;inset:0;z-index:100;background:rgba(3,12,30,.84);padding:18px;align-items:center;justify-content:center}.overlay.open{display:flex}.modal{background:#fff;width:min(760px,100%);max-height:92vh;overflow:auto;box-shadow:0 28px 80px rgba(0,0,0,.35)}.modal-head{position:sticky;top:0;z-index:3;display:flex;justify-content:space-between;align-items:center;background:var(--navy);color:#fff;padding:17px 20px}.modal-title{font:900 24px Barlow Condensed,sans-serif;letter-spacing:1px}.close{border:0;background:transparent;color:#fff;font-size:25px}.modal-body{padding:22px}.product-modal-grid{display:grid;grid-template-columns:260px 1fr;gap:24px}.modal-art{position:relative;background:#f4f6fa;aspect-ratio:1}.modal-art img{width:100%;height:100%;object-fit:contain}.choice-title{font-size:10px;font-weight:900;letter-spacing:2px;color:var(--muted);margin:17px 0 8px}.choices{display:flex;flex-wrap:wrap;gap:7px}.choice{border:1px solid var(--line);background:#fff;padding:9px 12px;font-weight:700;font-size:12px}.choice.on{background:var(--navy);color:#fff;border-color:var(--navy)}.qty{display:flex;align-items:center}.qty button{width:38px;height:38px;border:1px solid var(--line);background:#fff}.qty strong{display:grid;place-items:center;width:48px;height:38px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.add-bag{width:100%;border:0;background:var(--red);color:#fff;padding:16px;margin-top:21px;font-weight:900;letter-spacing:1px}.selection-total{font:900 28px Barlow Condensed,sans-serif;color:var(--navy);margin-top:17px}
+    .cart-empty{text-align:center;padding:50px 15px;color:var(--muted)}.cart-line{display:grid;grid-template-columns:74px 1fr auto;gap:13px;padding:13px 0;border-bottom:1px solid var(--line)}.cart-line img{width:74px;height:74px;object-fit:contain;background:#f5f6f8}.cart-line-name{font-weight:900;color:var(--navy)}.cart-line-detail{font-size:11px;color:var(--muted);line-height:1.6;margin-top:5px}.remove{border:0;background:none;color:var(--red);font-size:11px;padding:0;margin-top:6px}.cart-summary{background:var(--cream);padding:16px;margin-top:18px}.summary-row{display:flex;justify-content:space-between;margin:8px 0;font-size:13px}.summary-row.total{font:900 23px Barlow Condensed,sans-serif;color:var(--navy);border-top:1px solid #d5d0c5;padding-top:12px}.checkout{width:100%;border:0;background:#0070ba;color:#fff;padding:16px;font-weight:900;margin-top:12px}.checkout:disabled{background:#aab3c2;cursor:not-allowed}
+    .checkout-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px}.field{margin-bottom:12px}.field label{display:block;font-size:9px;font-weight:900;letter-spacing:2px;color:var(--muted);margin-bottom:6px}.field input,.field textarea,.field select{width:100%;border:1px solid var(--line);padding:12px;outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--blue)}.paypal-panel{border:1px solid var(--line);padding:16px;background:#fafbfc}.paypal-logo{color:#003087;font:900 26px Barlow Condensed,sans-serif}.paypal-message{font-size:12px;color:var(--muted);line-height:1.6;margin:8px 0 14px}.paypal-placeholder{border:2px dashed #aeb8c8;background:#f1f4f8;padding:22px 14px;text-align:center;color:#5f6978;font-size:12px;line-height:1.7}.success{text-align:center;padding:35px 15px}.success-icon{font-size:55px}.success h3{font:900 38px Barlow Condensed,sans-serif;color:var(--navy);margin:12px 0}.success p{color:var(--muted);line-height:1.7}.order-id{display:inline-block;background:var(--cream);padding:12px 18px;color:var(--red);font-weight:900;letter-spacing:2px}
+    @media(max-width:1050px){.product-grid{grid-template-columns:repeat(3,1fr)}.hero{grid-template-columns:1fr}.hero-stamp{display:none}}
+    @media(max-width:720px){.trust-strip{grid-template-columns:1fr 1fr}.trust:nth-child(2){border-right:0}.product-grid{grid-template-columns:1fr 1fr;gap:10px}.product-info{padding:13px}.product-name{font-size:19px}.section-head{display:block}.section-note{margin-top:15px}.product-modal-grid,.checkout-layout{grid-template-columns:1fr}.modal-art{max-width:320px;margin:auto}.site-header{padding:11px 13px}.brand-sub{display:none}.cart-button{padding:10px 12px}.hero{min-height:420px;padding-top:65px;padding-bottom:65px}h1{font-size:78px}.art-watermark span{font-size:7px}footer{align-items:flex-start}.stripes{display:none}}
+    @media(max-width:430px){.product-grid{grid-template-columns:1fr}.art-wrap{aspect-ratio:1.08}.product-name{min-height:auto}.announcement{font-size:9px}.brand-mark{width:40px;height:40px}.brand-name{font-size:25px}}
+    @media print{body{display:none!important}}
+  </style>
+</head>
+<body>
+  <div class="announcement">Ten designs. Built for the culture.</div>
+  <header class="site-header">
+    <div class="brand"><div class="brand-mark">10</div><div><div class="brand-name">PARIS LONDON HONG KONG</div></div></div>
+    <div style="display:flex;gap:10px;align-items:center">
+    <button class="cart-button" type="button" onclick="openCart()">BAG <span class="cart-count" id="cart-count">0</span></button>
+    <button class="cart-button" type="button" style="background:transparent;color:var(--navy);border:1px solid var(--line)" onclick="openManage()">MANAGE</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow">Ten standout designs</div>
+      <h1>TOP 10<br>TEES</h1>
+      <p>Find the tee that speaks your language. Pick your design, choose your color and size, and make it yours.</p>
+      <div class="hero-actions"><button class="primary" onclick="document.getElementById('collection').scrollIntoView()">Shop the ten</button><button class="secondary" onclick="openCart()">View bag</button></div>
+    </div>
+    <div class="hero-stamp"><div class="stamp-inner"><div class="stamp-sg">10</div><div class="stamp-rule"></div><div class="stamp-copy">PLHK</div><div class="stamp-small">ORIGINAL COLLECTION</div></div></div>
+  </section>
+
+  <main id="collection">
+    <div class="section-head">
+      <div><div class="section-kicker">THE PLHK COLLECTION</div><h2>CHOOSE YOUR FAVORITE</h2></div>
+      <div class="section-note">Choose a design, garment, color and size. Build your look and add it to your bag.</div>
+    </div>
+    <div class="product-grid" id="product-grid"></div>
+  </main>
+
+  <footer><div><div class="footer-brand">PARIS LONDON HONG KONG</div><div class="footer-copy">© 2026 PARIS LONDON HONG KONG.<br>ALL RIGHTS RESERVED.<br><a href="https://www.seymoregreen.com" style="color:#4BBB2A;text-decoration:none;font-weight:800">A SEYMORE GREEN COLLECTION →</a></div></div><div class="stripes"><i></i><i></i><i></i></div></footer>
+
+  <div class="overlay" id="product-overlay" role="dialog" aria-modal="true">
+    <div class="modal"><div class="modal-head"><div class="modal-title">BUILD YOUR TEE</div><button class="close" onclick="closeOverlay('product-overlay')" aria-label="Close">×</button></div><div class="modal-body" id="product-modal-body"></div></div>
+  </div>
+
+  <div class="overlay" id="cart-overlay" role="dialog" aria-modal="true">
+    <div class="modal"><div class="modal-head"><div class="modal-title">YOUR BAG</div><button class="close" onclick="closeOverlay('cart-overlay')" aria-label="Close">×</button></div><div class="modal-body"><div id="cart-lines"></div><div id="cart-footer"></div></div></div>
+  </div>
+
+  <div class="overlay" id="checkout-overlay" role="dialog" aria-modal="true">
+    <div class="modal"><div class="modal-head"><div class="modal-title">SECURE PAYPAL CHECKOUT</div><button class="close" onclick="closeOverlay('checkout-overlay')" aria-label="Close">×</button></div><div class="modal-body" id="checkout-body"></div></div>
+  </div>
+
+  <div class="overlay" id="manage-overlay" role="dialog" aria-modal="true">
+    <div class="modal"><div class="modal-head"><div class="modal-title">MANAGE PARIS LONDON HONG KONG</div><button class="close" onclick="closeOverlay('manage-overlay')" aria-label="Close">×</button></div><div class="modal-body" id="manage-body"></div></div>
+  </div>
+
+  <script>
+    /* ================================================================
+       PAYPAL CONNECTION
+       The Client ID may be public. Never paste a Client Secret here.
+       Test with a Sandbox Client ID, then switch to the Live Client ID.
+       ================================================================ */
+    const PAYPAL_CLIENT_ID = "PASTE_YOUR_LIVE_PAYPAL_CLIENT_ID_HERE";
+    const CURRENCY = "USD";
+    let SHIPPING_PRICE = 10;
+    /* Paste your Google Apps Script Web App URL here once deployed (see top10-tees-sheets-webhook.gs) */
+    const GOOGLE_SHEETS_WEBHOOK_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+
+    /* ================================================================
+       TOP 10 PRODUCTS
+       Later, replace each image value with its final finished artwork as
+       a data:image/... URL. These records do not use localStorage.
+       ================================================================ */
+    const PRODUCTS = [
+      {id:"T1001",name:"TOP TEN DESIGN 01",tag:"Top 10 Exclusive",price:30,accent:"#d71936",image:""},
+      {id:"T1002",name:"TOP TEN DESIGN 02",tag:"Top 10 Exclusive",price:30,accent:"#0f4c9a",image:""},
+      {id:"T1003",name:"TOP TEN DESIGN 03",tag:"Top 10 Exclusive",price:30,accent:"#16804a",image:""},
+      {id:"T1004",name:"TOP TEN DESIGN 04",tag:"Top 10 Exclusive",price:30,accent:"#6c2a83",image:""},
+      {id:"T1005",name:"TOP TEN DESIGN 05",tag:"Top 10 Exclusive",price:30,accent:"#ef8b1e",image:""},
+      {id:"T1006",name:"TOP TEN DESIGN 06",tag:"Top 10 Exclusive",price:30,accent:"#10131a",image:""},
+      {id:"T1007",name:"TOP TEN DESIGN 07",tag:"Top 10 Exclusive",price:30,accent:"#a6132b",image:""},
+      {id:"T1008",name:"TOP TEN DESIGN 08",tag:"Top 10 Exclusive",price:30,accent:"#0d7180",image:""},
+      {id:"T1009",name:"TOP TEN DESIGN 09",tag:"Top 10 Exclusive",price:30,accent:"#8a6820",image:""},
+      {id:"T1010",name:"TOP TEN DESIGN 10",tag:"Top 10 Exclusive",price:30,accent:"#071d49",image:""}
+    ];
+
+    const SIZE_UPCHARGE={S:0,M:0,L:0,XL:0,"2XL":3,"3XL":3,"4XL":5,"5XL":5};
+    const GARMENTS={Tee:0};
+    const COLORS=["Black","White","Navy","Gray"];
+    const PRINTS={"Left Sleeve":5,"Right Sleeve":5,"Back Print":10};
+    let cart=[];
+    let deliveryMethod="shipping";
+    let current=null;
+    let selection={garment:"Tee",color:"Black",size:"L",qty:1,prints:[]};
+
+    function escapeXml(v){return String(v).replace(/[<>&'\"]/g,c=>({"<":"&lt;",">":"&gt;","&":"&amp;","'":"&apos;",'\"':"&quot;"}[c]));}
+    function productArt(product,index){
+      if(product.image) return product.image;
+      const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#edf1f7"/></linearGradient></defs><rect width="900" height="900" fill="url(#g)"/><path d="M265 228l105-55c25 46 135 46 160 0l105 55 120 145-100 82-58-72v322H303V383l-58 72-100-82z" fill="#fff" stroke="${product.accent}" stroke-width="13"/><circle cx="450" cy="444" r="145" fill="${product.accent}"/><text x="450" y="430" text-anchor="middle" fill="#fff" font-family="Arial Black,Arial" font-size="128" font-weight="900">${String(index+1).padStart(2,"0")}</text><text x="450" y="500" text-anchor="middle" fill="#fff" font-family="Arial" font-size="28" font-weight="700" letter-spacing="6">PARIS LONDON HONG KONG</text><text x="450" y="765" text-anchor="middle" fill="#071d49" font-family="Arial Black,Arial" font-size="31" font-weight="900" letter-spacing="5">PLHK COLLECTION</text></svg>`;
+      return "data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(svg);
+    }
+    function watermark(){return '<div class="art-watermark"><span>PARIS LONDON HONG KONG</span><span>PARIS LONDON HONG KONG</span><span>PARIS LONDON HONG KONG</span></div><div class="corner-stamp">PLHK<br>ORIGINAL</div>';}
+    function money(n){return "$"+Number(n).toFixed(2)}
+    function printsCost(){return selection.prints.reduce((n,p)=>n+(PRINTS[p]||0),0)}
+    function productTotal(){return (current.price+GARMENTS[selection.garment]+SIZE_UPCHARGE[selection.size]+printsCost())*selection.qty}
+
+    function renderProducts(){
+      document.getElementById("product-grid").innerHTML=PRODUCTS.map((p,i)=>`<article class="product-card"><div class="rank">NO. ${String(i+1).padStart(2,"0")}</div><div class="art-wrap" oncontextmenu="return false"><img src="${productArt(p,i)}" alt="${escapeXml(p.name)}">${watermark()}</div><div class="product-info"><div class="product-name">${escapeXml(p.name)}</div><div class="product-tag">${escapeXml(p.tag)}</div><div class="product-bottom"><div class="price">FROM ${money(p.price)}</div><button class="choose" onclick="chooseProduct(${i})">Choose</button></div></div></article>`).join("");
+    }
+    function chooseProduct(index){
+      current=PRODUCTS[index];selection={garment:"Tee",color:"Black",size:"L",qty:1,prints:[]};renderProductModal();openOverlay("product-overlay");
+    }
+    function renderChoices(values,key){return values.map(v=>`<button class="choice ${selection[key]===v?'on':''}" onclick="setChoice('${key}','${v}')">${v}${key==='garment'&&GARMENTS[v]?` +${money(GARMENTS[v])}`:''}${key==='size'&&SIZE_UPCHARGE[v]?` +${money(SIZE_UPCHARGE[v])}`:''}</button>`).join("")}
+    function renderPrintChoices(){return Object.keys(PRINTS).map(v=>`<button class="choice ${selection.prints.includes(v)?'on':''}" onclick="togglePrint('${v}')">${v} +${money(PRINTS[v])}</button>`).join("")}
+    function togglePrint(value){const i=selection.prints.indexOf(value);if(i>-1)selection.prints.splice(i,1);else selection.prints.push(value);renderProductModal()}
+    function renderProductModal(){
+      const i=PRODUCTS.indexOf(current);
+      document.getElementById("product-modal-body").innerHTML=`<div class="product-modal-grid"><div class="modal-art"><img src="${productArt(current,i)}" alt="${escapeXml(current.name)}">${watermark()}</div><div><div class="section-kicker">${current.id}</div><h3 style="font:900 38px/.95 Barlow Condensed,sans-serif;color:var(--navy);margin:8px 0">${escapeXml(current.name)}</h3><div class="choice-title">COLOR</div><div class="choices">${renderChoices(COLORS,'color')}</div><div class="choice-title">SIZE</div><div class="choices">${renderChoices(Object.keys(SIZE_UPCHARGE),'size')}</div><div class="choice-title">PRINT ADD-ONS</div><div class="choices">${renderPrintChoices()}</div><div class="choice-title">QUANTITY</div><div class="qty"><button onclick="changeQty(-1)">−</button><strong>${selection.qty}</strong><button onclick="changeQty(1)">+</button></div><div class="selection-total">TOTAL ${money(productTotal())}</div><button class="add-bag" onclick="addToBag()">ADD TO BAG</button></div></div>`;
+    }
+    function setChoice(key,value){selection[key]=value;renderProductModal()}
+    function changeQty(delta){selection.qty=Math.max(1,Math.min(12,selection.qty+delta));renderProductModal()}
+    function addToBag(){cart.push({productId:current.id,name:current.name,image:productArt(current,PRODUCTS.indexOf(current)),...selection,total:productTotal()});updateCartCount();closeOverlay("product-overlay");openCart()}
+    function updateCartCount(){document.getElementById("cart-count").textContent=cart.reduce((n,i)=>n+i.qty,0)}
+    function subtotal(){return cart.reduce((n,i)=>n+i.total,0)}
+    function removeItem(index){cart.splice(index,1);updateCartCount();renderCart()}
+    function openCart(){renderCart();openOverlay("cart-overlay")}
+    function renderCart(){
+      const lines=document.getElementById("cart-lines"),footer=document.getElementById("cart-footer");
+      if(!cart.length){lines.innerHTML='<div class="cart-empty">Your bag is empty.<br>Choose one of the Top 10.</div>';footer.innerHTML="";return}
+      lines.innerHTML=cart.map((i,n)=>`<div class="cart-line"><img src="${i.image}" alt=""><div><div class="cart-line-name">${escapeXml(i.name)}</div><div class="cart-line-detail">${i.color} • Size ${i.size} • Qty ${i.qty}${i.prints&&i.prints.length?` • ${i.prints.join(", ")}`:""}</div><button class="remove" onclick="removeItem(${n})">REMOVE</button></div><strong>${money(i.total)}</strong></div>`).join("");
+      footer.innerHTML=`<div class="cart-summary"><div class="summary-row"><span>Merchandise</span><b>${money(subtotal())}</b></div><div class="summary-row"><span>Shipping</span><span>Calculated next</span></div><div class="summary-row total"><span>SUBTOTAL</span><span>${money(subtotal())}</span></div></div><button class="checkout" onclick="startCheckout()">CONTINUE TO PAYPAL</button>`;
+    }
+    function shippingFee(){return deliveryMethod==="shipping"?SHIPPING_PRICE:0}
+    function startCheckout(){deliveryMethod="shipping";closeOverlay("cart-overlay");renderCheckout();openOverlay("checkout-overlay");loadPayPal()}
+    function renderCheckout(){
+      document.getElementById("checkout-body").innerHTML=`<div class="checkout-layout"><div><div class="field"><label>FULL NAME</label><input id="buyer-name" autocomplete="name"></div><div class="field"><label>EMAIL</label><input id="buyer-email" type="email" autocomplete="email"></div><div class="field"><label>PHONE</label><input id="buyer-phone" autocomplete="tel"></div><div class="field"><label>DELIVERY</label><select id="delivery" onchange="setDelivery(this.value)"><option value="shipping">Ship my order (+${money(SHIPPING_PRICE)})</option><option value="pickup">Pickup in Roslindale</option></select></div><div class="field" id="address-field"><label>SHIPPING ADDRESS</label><textarea id="buyer-address" rows="3" placeholder="Street, city, state and ZIP"></textarea></div></div><div><div class="paypal-panel"><div class="paypal-logo">PayPal</div><div class="paypal-message">Complete your order below.</div><div id="paypal-button-container"></div><div class="paypal-placeholder" id="paypal-placeholder">CHECKOUT COMING SOON</div></div><div class="cart-summary"><div class="summary-row"><span>Merchandise</span><b>${money(subtotal())}</b></div><div class="summary-row"><span>Shipping</span><b id="checkout-shipping">${money(shippingFee())}</b></div><div class="summary-row total"><span>TOTAL</span><span id="checkout-total">${money(subtotal()+shippingFee())}</span></div></div></div></div>`;
+    }
+    function setDelivery(value){deliveryMethod=value;const address=document.getElementById("address-field");if(address)address.classList.toggle("hidden",value==="pickup");const ship=document.getElementById("checkout-shipping"),total=document.getElementById("checkout-total");if(ship)ship.textContent=money(shippingFee());if(total)total.textContent=money(subtotal()+shippingFee())}
+    function validBuyer(){
+      const name=document.getElementById("buyer-name"),email=document.getElementById("buyer-email"),phone=document.getElementById("buyer-phone"),address=document.getElementById("buyer-address");
+      const fields=[name,email,phone];if(deliveryMethod==="shipping")fields.push(address);let ok=true;fields.forEach(f=>{if(!f||!f.value.trim()){if(f)f.style.borderColor="var(--red)";ok=false}else f.style.borderColor=""});
+      if(email&&email.value&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){email.style.borderColor="var(--red)";ok=false}return ok;
+    }
+    function loadPayPal(){
+      if(PAYPAL_CLIENT_ID.includes("PASTE_YOUR"))return;
+      document.getElementById("paypal-placeholder")?.classList.add("hidden");
+      if(window.paypal){renderPayPalButtons();return}
+      const script=document.createElement("script");script.src=`https://www.paypal.com/sdk/js?client-id=${encodeURIComponent(PAYPAL_CLIENT_ID)}&currency=${CURRENCY}&components=buttons&disable-funding=venmo`;
+      script.onload=renderPayPalButtons;script.onerror=()=>{const el=document.getElementById("paypal-placeholder");if(el){el.classList.remove("hidden");el.innerHTML="PayPal could not load. Please refresh and try again."}};document.head.appendChild(script);
+    }
+    function renderPayPalButtons(){
+      const container=document.getElementById("paypal-button-container");if(!container||container.children.length)return;
+      paypal.Buttons({
+        style:{layout:"vertical",color:"blue",shape:"rect",label:"paypal"},
+        onClick(data,actions){if(!validBuyer()){alert("Please complete your contact and shipping information before paying.");return actions.reject()}return actions.resolve()},
+        createOrder(data,actions){
+          const items=cart.map(i=>({name:i.name,sku:i.productId,unit_amount:{currency_code:CURRENCY,value:(i.total/i.qty).toFixed(2)},quantity:String(i.qty),description:`${i.garment}, ${i.color}, Size ${i.size}`}));
+          return actions.order.create({purchase_units:[{description:"Paris London Hong Kong",amount:{currency_code:CURRENCY,value:(subtotal()+shippingFee()).toFixed(2),breakdown:{item_total:{currency_code:CURRENCY,value:subtotal().toFixed(2)},shipping:{currency_code:CURRENCY,value:shippingFee().toFixed(2)}}},items}]});
+        },
+        onApprove(data,actions){return actions.order.capture().then(details=>{if(details.status!=="COMPLETED")throw new Error("Payment was not completed");sendOrderToSheet(details.id);showSuccess(details.id)})},
+        onCancel(){alert("Payment was cancelled. Your bag is still here.")},
+        onError(err){console.error(err);alert("PayPal could not complete the payment. No order has been marked paid. Please try again.")}
+      }).render("#paypal-button-container");
+    }
+    function sendOrderToSheet(orderId){
+      if(GOOGLE_SHEETS_WEBHOOK_URL.includes("PASTE_YOUR"))return;
+      const payload={
+        orderId,
+        buyerName:document.getElementById("buyer-name")?.value||"",
+        buyerEmail:document.getElementById("buyer-email")?.value||"",
+        buyerPhone:document.getElementById("buyer-phone")?.value||"",
+        deliveryMethod,
+        address:deliveryMethod==="shipping"?(document.getElementById("buyer-address")?.value||""):"Pickup in Roslindale",
+        items:cart.map(i=>({name:i.name,color:i.color,size:i.size,qty:i.qty,prints:i.prints||[],total:i.total})),
+        subtotal:subtotal(),
+        shipping:shippingFee(),
+        total:subtotal()+shippingFee()
+      };
+      fetch(GOOGLE_SHEETS_WEBHOOK_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify(payload)})
+        .catch(e=>console.error("Could not log order to Google Sheets",e));
+    }
+    function showSuccess(orderId){document.getElementById("checkout-body").innerHTML=`<div class="success"><div class="success-icon">✓</div><h3>PAYMENT COMPLETED</h3><p>Your payment was completed successfully. Save this order number for your records.</p><div class="order-id">${escapeXml(orderId)}</div><p>We’ll confirm production and fulfillment using the contact information supplied at checkout.</p><button class="primary" onclick="finishOrder()">DONE</button></div>`}
+    function finishOrder(){cart=[];updateCartCount();closeOverlay("checkout-overlay")}
+    function openOverlay(id){document.getElementById(id).classList.add("open");document.body.style.overflow="hidden"}
+    function closeOverlay(id){document.getElementById(id).classList.remove("open");document.body.style.overflow=""}
+    const ADMIN_PIN="239367";
+    let manageUnlocked=false;
+    let manageView="designs";
+    let gallery=[];
+    function openManage(){renderManageBody();openOverlay("manage-overlay")}
+    function renderManageBody(){
+      const body=document.getElementById("manage-body");
+      if(!manageUnlocked){
+        body.innerHTML=`<div style="max-width:260px;margin:0 auto;text-align:center"><div class="choice-title" style="margin-top:0">ENTER MANAGER PIN</div><input id="manage-pin" type="password" inputmode="numeric" style="width:100%;border:1px solid var(--line);padding:12px;text-align:center;font-size:18px;letter-spacing:4px" autofocus><button class="add-bag" onclick="checkPin()">UNLOCK</button><div id="pin-error" style="color:var(--red);font-size:12px;margin-top:10px"></div></div>`;
+        const pinInput=document.getElementById("manage-pin");
+        pinInput.addEventListener("keydown",e=>{if(e.key==="Enter")checkPin()});
+        return;
+      }
+      const tabs=`<div style="display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap">
+        <button class="choice ${manageView==='designs'?'on':''}" onclick="switchManageView('designs')">TOP 10 DESIGNS</button>
+        <button class="choice ${manageView==='gallery'?'on':''}" onclick="switchManageView('gallery')">PHOTO GALLERY</button>
+        <button class="choice ${manageView==='shipping'?'on':''}" onclick="switchManageView('shipping')">SHIPPING</button>
+      </div>`;
+      body.innerHTML=tabs+(manageView==="designs"?renderDesignsTab():manageView==="gallery"?renderGalleryTab():renderShippingTab());
+    }
+    function switchManageView(view){manageView=view;renderManageBody()}
+    function renderDesignsTab(){
+      return `<div class="section-note" style="margin-bottom:18px">Upload a photo, pick from your gallery, or use the arrows to rearrange the order designs appear on the site. It saves automatically for every visitor.</div>`+PRODUCTS.map((p,i)=>`
+        <div style="display:grid;grid-template-columns:auto 90px 1fr auto;gap:14px;align-items:center;border-bottom:1px solid var(--line);padding:14px 0">
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <button class="choice" style="padding:4px 8px" onclick="moveProduct('${p.id}',-1)" ${i===0?"disabled":""}>▲</button>
+            <button class="choice" style="padding:4px 8px" onclick="moveProduct('${p.id}',1)" ${i===PRODUCTS.length-1?"disabled":""}>▼</button>
+          </div>
+          <img src="${productArt(p,i)}" alt="" style="width:90px;height:90px;object-fit:contain;background:#f4f6fa">
+          <div><div style="font:900 15px Barlow Condensed,sans-serif;color:var(--navy)">NO. ${String(i+1).padStart(2,"0")} — ${escapeXml(p.name)}</div><div id="manage-status-${p.id}" style="font-size:11px;color:var(--muted)">${p.image?"Custom photo uploaded":"Using placeholder art"}</div></div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end">
+            <label class="choice" style="cursor:pointer">UPLOAD<input type="file" accept="image/*" style="display:none" onchange="uploadPhoto('${p.id}',this)"></label>
+            ${gallery.length?`<select class="choice" style="cursor:pointer" onchange="if(this.value){assignGalleryPhoto(this.value,'${p.id}');this.value=''}"><option value="">FROM GALLERY…</option>${gallery.map(g=>`<option value="${g.id}">${escapeXml(g.name)}</option>`).join("")}</select>`:""}
+            ${p.image?`<button class="choice" onclick="removePhoto('${p.id}')">REMOVE</button>`:""}
+          </div>
+        </div>`).join("");
+    }
+    function renderGalleryTab(){
+      return `<div class="section-note" style="margin-bottom:18px">Keep a rotating bank of shirt photos here. Assign any of them to a Top 10 slot from the "FROM GALLERY" dropdown on the Designs tab — swap designs in and out without re-uploading.</div>
+      <label class="add-bag" style="display:block;text-align:center;cursor:pointer;margin-bottom:20px">ADD PHOTOS TO GALLERY<input type="file" accept="image/*" multiple style="display:none" onchange="uploadToGallery(this)"></label>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:14px">
+        ${gallery.length?gallery.map(g=>`
+          <div style="border:1px solid var(--line);padding:8px;text-align:center">
+            <img src="${g.dataUrl}" alt="${escapeXml(g.name)}" style="width:100%;height:90px;object-fit:contain;background:#f4f6fa">
+            <div style="font-size:10px;color:var(--muted);margin:6px 0;word-break:break-word">${escapeXml(g.name)}</div>
+            <button class="choice" style="width:100%;font-size:10px" onclick="removeFromGallery('${g.id}')">REMOVE</button>
+          </div>`).join(""):`<div class="section-note">No photos in the gallery yet — add some above.</div>`}
+      </div>`;
+    }
+    function renderShippingTab(){
+      return `<div class="section-note" style="margin-bottom:18px">Set the shipping cost charged at checkout. Pickup in Roslindale always stays free. This updates for every visitor as soon as you save.</div>
+      <div style="max-width:260px">
+        <div class="choice-title" style="margin-top:0">SHIPPING COST</div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px">
+          <span style="font-weight:900;font-size:20px">$</span>
+          <input id="shipping-price-input" type="number" min="0" step="0.5" value="${SHIPPING_PRICE}" style="width:100px;border:2px solid var(--navy);padding:8px;font-size:20px;font-weight:900;text-align:center">
+        </div>
+        <button class="add-bag" onclick="saveShippingPrice()">SAVE SHIPPING PRICE</button>
+        <div id="shipping-save-msg" style="font-size:11px;color:var(--muted);margin-top:10px"></div>
+      </div>`;
+    }
+    async function saveShippingPrice(){
+      const input=document.getElementById("shipping-price-input");
+      const value=parseFloat(input.value);
+      const msg=document.getElementById("shipping-save-msg");
+      if(isNaN(value)||value<0){if(msg)msg.textContent="Enter a valid amount.";return}
+      SHIPPING_PRICE=value;
+      const ok=await saveSettings();
+      if(msg)msg.textContent=ok?("Saved — shipping is now "+money(value)+" for every visitor."):"Saved for this session, but couldn't sync — check your connection and try again.";
+      renderCheckout();
+    }
+    function moveProduct(productId,delta){
+      const idx=PRODUCTS.findIndex(p=>p.id===productId);
+      const newIdx=idx+delta;
+      if(newIdx<0||newIdx>=PRODUCTS.length)return;
+      [PRODUCTS[idx],PRODUCTS[newIdx]]=[PRODUCTS[newIdx],PRODUCTS[idx]];
+      saveSettings();renderManageBody();renderProducts();
+    }
+    function uploadToGallery(input){
+      const files=Array.from(input.files||[]);if(!files.length)return;
+      files.forEach(file=>{
+        const reader=new FileReader();
+        reader.onload=async()=>{
+          const id="g"+Date.now()+Math.random().toString(36).slice(2,7);
+          const item={id,name:file.name.replace(/\.[a-z0-9]+$/i,""),dataUrl:reader.result};
+          gallery.push(item);
+          await saveSettings();
+          renderManageBody();
+        };
+        reader.onerror=()=>alert(`Could not read "${file.name}". Please try another file.`);
+        reader.readAsDataURL(file);
+      });
+      input.value="";
+    }
+    async function removeFromGallery(id){
+      gallery=gallery.filter(g=>g.id!==id);
+      await saveSettings();
+      renderManageBody();
+    }
+    async function assignGalleryPhoto(galleryId,productId){
+      const item=gallery.find(g=>g.id===galleryId);const product=PRODUCTS.find(p=>p.id===productId);
+      if(!item||!product)return;
+      product.image=item.dataUrl;
+      await saveSettings();
+      renderManageBody();renderProducts();
+    }
+    function checkPin(){
+      const val=document.getElementById("manage-pin")?.value.trim();
+      if(val===ADMIN_PIN){manageUnlocked=true;renderManageBody()}
+      else{const err=document.getElementById("pin-error");if(err)err.textContent="Incorrect PIN. Try again."}
+    }
+    function uploadPhoto(productId,input){
+      const file=input.files&&input.files[0];if(!file)return;
+      const reader=new FileReader();
+      reader.onload=async()=>{
+        const dataUrl=reader.result;
+        const product=PRODUCTS.find(p=>p.id===productId);if(!product)return;
+        product.image=dataUrl;
+        await saveSettings();
+        renderManageBody();renderProducts();
+      };
+      reader.onerror=()=>alert("Could not read that photo. Please try another file.");
+      reader.readAsDataURL(file);
+    }
+    async function removePhoto(productId){
+      const product=PRODUCTS.find(p=>p.id===productId);if(!product)return;
+      product.image="";
+      await saveSettings();
+      renderManageBody();renderProducts();
+    }
+    /* ---- Settings persistence via the same Google Sheets Apps Script webhook ---- */
+    async function saveSettings(){
+      if(GOOGLE_SHEETS_WEBHOOK_URL.includes("PASTE_YOUR"))return false;
+      const settings={
+        productOrder:PRODUCTS.map(p=>p.id),
+        photos:Object.fromEntries(PRODUCTS.map(p=>[p.id,p.image||""])),
+        gallery,
+        shippingPrice:SHIPPING_PRICE
+      };
+      try{
+        await fetch(GOOGLE_SHEETS_WEBHOOK_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify({type:"settings",settings})});
+        return true;
+      }catch(e){console.error("Could not save settings to Google Sheets",e);return false}
+    }
+    async function loadSettings(){
+      if(GOOGLE_SHEETS_WEBHOOK_URL.includes("PASTE_YOUR"))return;
+      try{
+        const res=await fetch(`${GOOGLE_SHEETS_WEBHOOK_URL}?type=settings`);
+        const settings=await res.json();
+        if(!settings||!Object.keys(settings).length)return;
+        if(Array.isArray(settings.productOrder)){
+          const byId=Object.fromEntries(PRODUCTS.map(p=>[p.id,p]));
+          const reordered=settings.productOrder.map(id=>byId[id]).filter(Boolean);
+          PRODUCTS.forEach(p=>{if(!reordered.includes(p))reordered.push(p)});
+          PRODUCTS.length=0;PRODUCTS.push(...reordered);
+        }
+        if(settings.photos){PRODUCTS.forEach(p=>{if(settings.photos[p.id])p.image=settings.photos[p.id]})}
+        if(Array.isArray(settings.gallery))gallery=settings.gallery;
+        if(typeof settings.shippingPrice==="number")SHIPPING_PRICE=settings.shippingPrice;
+      }catch(e){console.error("Could not load settings from Google Sheets",e)}
+    }
+    document.querySelectorAll(".overlay").forEach(o=>o.addEventListener("click",e=>{if(e.target===o)closeOverlay(o.id)}));
+    document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".overlay.open").forEach(o=>closeOverlay(o.id))});
+    document.addEventListener("contextmenu",e=>{if(e.target.closest(".art-wrap,.modal-art"))e.preventDefault()});
+    (async()=>{await loadSettings();renderProducts();updateCartCount()})();
+  </script>
+</body>
+</html>
